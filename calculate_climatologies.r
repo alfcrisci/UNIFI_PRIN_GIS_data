@@ -6,7 +6,6 @@ if ( !require(rts)) { install.packages("rts") }
 library(raster)
 library(rts)
 
-setwd("/home/alf/Scrivania/6_PRIN Resilienza/R_data")
 
 proj_32N=readRDS("projections/proj_32N.rds")
 proj_3003=readRDS("projections/proj_3003.rds")
@@ -23,7 +22,7 @@ month_name=toupper(c("gen","feb","mar","apr","mag",
              "giu","lug","ago","set","ott",
              "nov","dic"))
 
-dir.create("MODIS_TS_tif")
+dir.create("NASA_IBIMET_TS_tif")
 
 #############################################################################################################################################à
 
