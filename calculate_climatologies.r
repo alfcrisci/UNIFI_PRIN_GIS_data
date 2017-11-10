@@ -10,7 +10,7 @@ library(rts)
 proj_32N=readRDS("projections/proj_32N.rds")
 proj_3003=readRDS("projections/proj_3003.rds")
 
-files=list.files(pattern="NASA.*_UNIFI.rds")
+files=list.files(path="Rdata",pattern="NASA.*_UNIFI.rds",full.names=T)
 
 data_NASA=sapply(files,readRDS)
 
@@ -33,7 +33,7 @@ modis_day_TS_monthly=apply.monthly(modis_day_TS,mean,na.rm=T)
 id_mese=format(as.Date(index(modis_day_TS_monthly)),"%Y_%m")
 
 for ( i in 1:length(id_mese)) {
-                              writeRaster(projectRaster(modis_day_TS_monthly[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_LST_day_",id_mese[i],".tif"))
+                              writeRaster(projectRaster(modis_day_TS_monthly[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_LST_day_",id_mese[i],".tif"))
                               }
                                 
 climatology_MODIS_day=list()
@@ -42,11 +42,11 @@ for (  i in 1:12) {
 
   id_month=grep(month[i],index(modis_day_TS_monthly))
   climatology_MODIS_day[[i]]=calc(modis_day_TS_monthly[[id_month]]@raster,mean)
-  writeRaster(projectRaster(climatology_MODIS_day[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_LST_day_",month_name[i],"_clim_2000-2017.tif"))
+  writeRaster(projectRaster(climatology_MODIS_day[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_LST_day_",month_name[i],"_clim_2000-2017.tif"))
 
 }
 
-saveRDS(climatology_MODIS_day,"NASA_PRIN_climatology_MODIS_day.rds")
+saveRDS(climatology_MODIS_day,"Rdata/NASA_PRIN_climatology_MODIS_day.rds")
 
 #############################################################################################################################################à
 
@@ -57,7 +57,7 @@ modis_night_TS_monthly=apply.monthly(modis_night_TS,mean,na.rm=T)
 id_mese=format(as.Date(index(modis_night_TS_monthly)),"%Y_%m")
 
 for ( i in 1:length(id_mese)) {
-  writeRaster(projectRaster(modis_night_TS_monthly[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_LST_night_",id_mese[i],".tif"))
+  writeRaster(projectRaster(modis_night_TS_monthly[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_LST_night_",id_mese[i],".tif"))
 }
 
 
@@ -66,10 +66,10 @@ climatology_MODIS_night=list()
 for (  i in 1:12) {
   id_month=grep(month[i],index(modis_day_TS_monthly))
   climatology_MODIS_night[[i]]=calc(modis_night_TS_monthly[[id_month]]@raster,mean)
-  writeRaster(projectRaster(climatology_MODIS_night[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_LST_night_",month_name[i],"_clim_2000-2017.tif"))
+  writeRaster(projectRaster(climatology_MODIS_night[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_LST_night_",month_name[i],"_clim_2000-2017.tif"))
 }
 
-saveRDS(climatology_MODIS_day,"NASA_PRIN_climatology_MODIS_night.rds")
+saveRDS(climatology_MODIS_day,"Rdata/NASA_PRIN_climatology_MODIS_night.rds")
 
 #############################################################################################################################################à
 
@@ -80,7 +80,7 @@ NDVI_TS_monthly=apply.monthly(NDVI_TS,mean,na.rm=T)
 id_mese=format(as.Date(index(NDVI_TS_monthly)),"%Y_%m")
 
 for ( i in 1:length(id_mese)) {
-  writeRaster(projectRaster(NDVI_TS_monthly[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_NDVI_",id_mese[i],".tif"))
+  writeRaster(projectRaster(NDVI_TS_monthly[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_NDVI_",id_mese[i],".tif"))
 }
 
 climatology_NDVI=list()
@@ -88,11 +88,11 @@ climatology_NDVI=list()
 for (  i in 1:12) {
   id_month=grep(month[i],index(NDVI_TS_monthly))
   climatology_NDVI[[i]]=calc(NDVI_TS_monthly[[id_month]]@raster,mean)
-  writeRaster(projectRaster(climatology_NDVI[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_NDVI_",month_name[i],"_clim_2000-2017.tif"))
+  writeRaster(projectRaster(climatology_NDVI[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_NDVI_",month_name[i],"_clim_2000-2017.tif"))
 }
 
 
-saveRDS( climatology_NDVI,"NASA_PRIN_climatology_MODIS_NDVI.rds")
+saveRDS( climatology_NDVI,"Rdata/NASA_PRIN_climatology_MODIS_NDVI.rds")
 
 #############################################################################################################################################à
 
@@ -103,7 +103,7 @@ EVI_TS_monthly=apply.monthly(EVI_TS,mean,na.rm=T)
 id_mese=format(as.Date(index(EVI_TS_monthly)),"%Y_%m")
 
 for ( i in 1:length(id_mese)) {
-  writeRaster(projectRaster(EVI_TS_monthly[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_EVI_",id_mese[i],".tif"))
+  writeRaster(projectRaster(EVI_TS_monthly[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_EVI_",id_mese[i],".tif"))
 }
 
 climatology_EVI=list()
@@ -111,10 +111,10 @@ climatology_EVI=list()
 for (i in 1:12) {
   id_month=grep(month[i],index(EVI_TS_monthly))
   climatology_EVI[[i]]=calc(EVI_TS_monthly[[id_month]]@raster,mean)
-  writeRaster(projectRaster(climatology_EVI[[i]],crs=proj_32N),filename=paste0("MODIS_TS_tif","/","NASA_PRIN_EVI_",month_name[i],"_clim_2000-2017.tif"))
+  writeRaster(projectRaster(climatology_EVI[[i]],crs=proj_32N),filename=paste0("NASA_IBIMET_TS_tif","/","NASA_PRIN_EVI_",month_name[i],"_clim_2000-2017.tif"))
 }
 
-saveRDS(climatology_EVI,"NASA_PRIN_climatology_MODIS_EVI.rds")
+saveRDS(climatology_EVI,"Rdata/NASA_PRIN_climatology_MODIS_EVI.rds")
 
 #####################################################################################################################################
 if ( file.exists("DTM10K_REGTOSC.tif")) {
@@ -123,7 +123,7 @@ if ( file.exists("DTM10K_REGTOSC.tif")) {
                  UNIFI_AreaInquadramento=readRDS("UNIFI_AreaInquadramento.rds")
                  UNIFI_AreaInquadramento_3003=spTransform(UNIFI_AreaInquadramento,proj_3003)
                  dem_inq=projectRaster(crop(dem_reg_3003,extent(UNIFI_AreaInquadramento_3003)),crs=proj_32N)
-                 saveRDS(dem_inq,"REGTOS_dem_area_inq.rds")
+                 saveRDS(dem_inq,"Rdata/REGTOS_dem_area_inq.rds")
 }
 #####################################################################################################################################
 
