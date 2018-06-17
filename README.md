@@ -8,8 +8,6 @@ Coordinato dal Prof. Roberto Bologna -  DIDA  Dipartimento di Architetttura Univ
 
 ![Area di progetto](Area_PRIN.jpg)
 
-![Orientamento strade](Orientamento_strade.png)
-
 
 
 ## Autori
