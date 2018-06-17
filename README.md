@@ -6,7 +6,7 @@ This data was created to perform investigation for PRIN Progetto di ricerca di r
 
 Coordinato dal Prof. Roberto Bologna -  DIDA  Dipartimento di Architetttura Università di Firenze
 
-[Area di progetto]:(Area_PRIN.jpg)
+![Area di progetto](Area_PRIN.jpg)
 
 
 
