@@ -17,7 +17,7 @@ ISTITUTO di BIOMETEOROLOGIA IBIMET-CNR Consiglio Nazionale delle Ricerche
 ### Marco Morabito m.morabito@ibimet.cnr.it
 
 
-## WorldClim WIND Version2 extraction for investigated area.
+#### Reference for WorldClim WIND Version2 extracted for PRIN project area.
 
 Fick, S.E. and R.J. Hijmans, 2017. Worldclim 2: New 1-km spatial resolution climate surfaces for global land areas. International Journal of Climatology.
 
