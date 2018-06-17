@@ -2,13 +2,19 @@
 
 This data was created to perform investigation for PRIN Progetto di ricerca di rilevante interesse nazionale 2015 
 
-## ADAPTIVE DESIGN e INNOVAZIONI TECNOLOGICHE PER LA RIGERNARAZIONE RESILIENTE DEI DISTRETTI URBANI IN REGIME DI CAMBIAMENTO CLIMATICO
+### ADAPTIVE DESIGN e INNOVAZIONI TECNOLOGICHE PER LA RIGERNARAZIONE RESILIENTE DEI DISTRETTI URBANI IN REGIME DI CAMBIAMENTO CLIMATICO
 
-Coordinato dal Prof. Roberto Bologna DIDA  Dipartimento di Architetttura UNiversità di Firenze
+Coordinato dal Prof. Roberto Bologna -  DIDA  Dipartimento di Architetttura Università di Firenze
 
 
 ## Autori
+
+ISTITUTO di BIOMETEOROLOGIA IBIMET-CNR Consiglio Nazionale delle Ricerche
+
    
+### Alfonso Crisci a.crisci@ibimet.cnr.it
+
+### Marco Morabito m.morabito@ibimet.cnr.it
 
 
 ## WorldClim WIND Version2 extraction for investigated area.
