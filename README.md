@@ -1,4 +1,4 @@
-# UNIFI_PRIN_GIS_data
+# UNIFI PRIN GIS data repository
 
 This data was created to perform investigation for PRIN Progetto di ricerca di rilevante interesse nazionale 2015 
 
