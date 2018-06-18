@@ -1,6 +1,8 @@
 # UNIFI PRIN GIS data repository
 [![DOI](https://zenodo.org/badge/110268528.svg)](https://zenodo.org/badge/latestdoi/110268528)
 
+Crisci,Alfonso, Morabito, Marco, & Nardino, Marianna. (2018). UNIFI PRIN Florentine Area spatial data (Version 1.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1292140
+
 This data was created to perform investigation for PRIN (Progetto di ricerca di rilevante interesse nazionale 2015). 
 
 ### ADAPTIVE DESIGN e INNOVAZIONI TECNOLOGICHE PER LA RIGERNARAZIONE RESILIENTE DEI DISTRETTI URBANI IN REGIME DI CAMBIAMENTO CLIMATICO
