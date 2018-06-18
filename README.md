@@ -1,4 +1,5 @@
 # UNIFI PRIN GIS data repository
+[![DOI](https://zenodo.org/badge/110268528.svg)](https://zenodo.org/badge/latestdoi/110268528)
 
 This data was created to perform investigation for PRIN (Progetto di ricerca di rilevante interesse nazionale 2015). 
 
